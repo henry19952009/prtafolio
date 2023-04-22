@@ -1,0 +1,67 @@
+
+#perfil{
+  display:inline-block;
+  position: absolute;
+
+
+}
+
+#trabajos{
+  display:inline;
+position:relative;
+left: 18cm;
+
+}
+#imagen{
+display:block;
+width: 300px;
+height: 300px;
+position: absolute;
+left:6cm;
+top:5cm;
+border-radius: 50%;
+margin: 0%;
+
+}
+#grid-1{
+  display: flex;
+  position: relative;
+  top: 18cm;
+  left: -1cm;
+
+}
+#texto1{
+
+  display:block;
+  width:10cm;
+  position:absolute;
+  left: 21cm;
+  top:7cm;
+
+
+}
+#titulo2{
+  display:inline-block;
+  position: relative;
+  font-weight: bold;
+  top: 17cm;
+  left: 14cm;
+}
+#Grid-2{
+    display:grid;
+
+    grid-template-columns: repeat(5,auto);
+    margin-right: 1cm;
+    margin-left: 1cm;
+    position: absolute;
+    top:20cm;
+    left: -0.5cm;
+
+
+    }
+#pngs{
+width: 60px;
+position: relative;
+align-items: center;
+padding:0cm 2.8cm;
+}
