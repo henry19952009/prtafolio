@@ -5,11 +5,14 @@
 }
 #FlexP{
   display: flex;
+
   position: relative;
   top:3cm;
   left:2cm;
-  width: 100%;
+  width: 94%;
 }
-#cardj{
-  
+@media(max-width: 951px){
+  #FlexP{
+   flex-wrap: wrap;
+  }
 }

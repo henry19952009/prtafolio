@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApiPeliculasComponent } from './api-peliculas/api-peliculas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './modal/modal.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 
 
@@ -23,6 +25,8 @@ import { ModalComponent } from './modal/modal.component';
     PrincipalComponent,
     ApiPeliculasComponent,
     ModalComponent,
+    NavbarComponent,
+    
 
 
 

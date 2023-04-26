@@ -1,67 +1,89 @@
 
-#perfil{
-  display:inline-block;
+
+.panel{
+  display:flex;
+
+}
+#texto{
+  flex: auto;
+  width: 300px;
+  height: 300px;
   position: absolute;
-
-
+  left:63%;
+  top:35%;
+  color: black;
 }
 
-#trabajos{
-  display:inline;
-position:relative;
-left: 18cm;
-
-}
 #imagen{
-display:block;
+flex:auto;
 width: 300px;
 height: 300px;
 position: absolute;
-left:6cm;
-top:5cm;
+left:18%;
+top:30%;
 border-radius: 50%;
 margin: 0%;
 
 }
 #grid-1{
-  display: flex;
-  position: relative;
+  display:flex;
+  position: absolute;
   top: 18cm;
-  left: -1cm;
-
-}
-#texto1{
-
-  display:block;
-  width:10cm;
-  position:absolute;
-  left: 21cm;
-  top:7cm;
+  left: -3cm;
 
 
 }
+
 #titulo2{
-  display:inline-block;
-  position: relative;
+  display:flex;
+  position:absolute;
   font-weight: bold;
-  top: 17cm;
-  left: 14cm;
+  top: 100%;
+  left: 38%;
 }
-#Grid-2{
-    display:grid;
 
-    grid-template-columns: repeat(5,auto);
-    margin-right: 1cm;
-    margin-left: 1cm;
-    position: absolute;
-    top:20cm;
-    left: -0.5cm;
-
-
-    }
 #pngs{
+flex:auto;
 width: 60px;
 position: relative;
 align-items: center;
 padding:0cm 2.8cm;
 }
+
+@media (max-width: 685px) {
+  #texto {
+      position: absolute;
+      top: 90%;
+      left:20%;
+    }
+  }
+  @media (max-width: 685px){
+    #titulo2{
+      position:absolute;
+      top: 130%;
+      left: 20%;
+    }
+  }
+  @media(max-width: 685px){
+    #grid-1{
+    position:relative ;
+    top:20cm;
+    left:0cm;
+
+  }}
+  @media(max-width:685px){
+    #grid-1{
+      flex-direction:column;
+      position:absolute;
+      left: -1800px;
+
+      width:2000px;
+    }
+  }
+  @media(max-width: 685px){
+    #pngs{
+
+    }
+  }
+
+
