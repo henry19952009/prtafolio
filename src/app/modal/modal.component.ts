@@ -22,7 +22,7 @@ constructor(private apc: ApiPeliculasComponent){};
 }
   datosModal(){
   this.imagenesBaner=this.apc.imagen;
-  this.tituloBaner=this.apc.movie;
+  this.tituloBaner=this.apc.title;
   console.log(this.imagenesBaner)
 
   }

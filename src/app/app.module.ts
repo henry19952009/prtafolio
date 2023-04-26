@@ -26,7 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ApiPeliculasComponent,
     ModalComponent,
     NavbarComponent,
-    
+
 
 
 
