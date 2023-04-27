@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # FrontP
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
@@ -29,3 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # prtafolio
 >>>>>>> bc85b3eafeb71cf22100ba631ac9a933571d78f6
+
