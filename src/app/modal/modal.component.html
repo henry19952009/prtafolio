@@ -1,16 +1,39 @@
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+  <!-- Modal Trigger  -->
+
+
 
   <!-- Modal Structure -->
-  <div id="modal1" class="modal">
+  <div id="modal1" class="modal" >
     <div class="modal-content">
 
-      <h4>{{tituloBaner.title.titulo_1}}</h4>
+      <h4>{{tituloBaner.titulo_1}}</h4>
       <img [src]="imagenesBaner.imagen_1">
-      <p>A bunch of text</p>
+      <p></p>
     </div>
-    <div class="modal-footer">
-      <a href="#" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
+
+    <!--footer, en caso de desear activarlo
+      <div class="modal-footer">
+
+    </div>-->
   </div>
-  <script>M.AutoInit();</script>
+  <div id="modal2" class="modal" >
+    <div class="modal-content">
+
+      <h4>{{tituloBaner.titulo_2}}</h4>
+      <img [src]="imagenesBaner.imagen_2">
+      <p></p>
+    </div>
+
+  </div>
+  <div id="modal3" class="modal" >
+    <div class="modal-content">
+
+      <h4>{{tituloBaner.titulo_3}}</h4>
+      <img [src]="imagenesBaner.imagen_3">
+      <p></p>
+    </div>
+
+  </div>
+  <script>
+  M.AutoInit();
+  </script>

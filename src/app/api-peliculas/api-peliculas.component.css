@@ -11,6 +11,10 @@
   left:2cm;
   width: 94%;
 }
+img{
+  padding: 3%;
+}
+
 @media(max-width: 951px){
   #FlexP{
    flex-wrap: wrap;

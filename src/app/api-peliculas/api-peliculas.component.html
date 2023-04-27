@@ -2,7 +2,7 @@
 <div id="FlexP">
  <div id="cardJ">
   <div class="row">
-    <div class="col s12 m7">
+    <div class="col s12 m10">
       <div class="card">
         <div class="card-image">
           <img id='0'[src]="imagen.imagen_1">
@@ -12,7 +12,7 @@
           {{title.titulo_1}}
         </div>
         <div class="card-action">
-          <app-modal></app-modal>
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Info</a>
 
         </div>
 
@@ -23,7 +23,7 @@
  </div>
  <div id="cardJ">
   <div class="row">
-    <div class="col s12 m7">
+    <div class="col s12 m10">
       <div class="card">
         <div class="card-image">
           <img [src]="imagen.imagen_2">
@@ -33,7 +33,8 @@
           {{title.titulo_2}}
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Info</a>
         </div>
       </div>
     </div>
@@ -41,7 +42,7 @@
  </div>
  <div id="cardJ">
   <div class="row">
-    <div class="col s12 m7">
+    <div class="col s12 m10">
       <div class="card">
         <div class="card-image">
           <img [src]="imagen.imagen_3">
@@ -51,7 +52,7 @@
           {{title.titulo_3}}
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal3">Info</a>
         </div>
       </div>
     </div>
@@ -59,7 +60,7 @@
  </div>
  <div id="cardJ">
   <div class="row">
-    <div class="col s12 m7">
+    <div class="col s12 m10">
       <div class="card">
         <div class="card-image">
           <img [src]="imagen.imagen_4">
@@ -76,6 +77,6 @@
   </div>
  </div>
 </div>
-
+<app-modal></app-modal>
 <button id="boton-r" (click)="volver()">inicio</button>
 

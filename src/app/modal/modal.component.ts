@@ -12,19 +12,36 @@ export class ModalComponent implements OnInit{
 constructor(private apc: ApiPeliculasComponent){};
   imagenesBaner:any;
   tituloBaner:any;
+  cardIds: any;
+  id: string="";
   ngOnInit(): void {
-  const elems = document.querySelectorAll('.modal');
-  const options = {};
-  M.Modal.init(elems, options);
+
   this.apc.obtnerDatos()
-  this.apc.iniciarApi()
+  this.cards();
   this.datosModal();
+
 }
   datosModal(){
-  this.imagenesBaner=this.apc.imagen;
-  this.tituloBaner=this.apc.title;
-  console.log(this.imagenesBaner)
+  this.apc.obtnerDatos().subscribe((data:any)=>{
+    this.imagenesBaner={
+      imagen_1:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[0].poster_path,
+      imagen_2:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[1].poster_path,
+      imagen_3:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[2].poster_path}
+      this.tituloBaner={
+        titulo_1:data.results[0].title,
+        titulo_2:data.results[1].title,
+        titulo_3:data.results[2].title}
+  });
 
   }
+  cards():void{
+    const elems = document.querySelectorAll('.modal');
+
+    const options = {};
+    M.Modal.init(elems, options);
+
+
+  }
+
 }
 
