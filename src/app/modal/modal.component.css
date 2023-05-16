@@ -6,3 +6,10 @@ img{
   width: 30%;
   border-radius: 2%;
 }
+.descripcion{
+  position: absolute;
+  display: inline;
+  width: 60%;
+  margin-top:1cm;
+  margin-left:1cm;
+}

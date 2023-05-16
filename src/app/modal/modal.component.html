@@ -1,14 +1,10 @@
-  <!-- Modal Trigger  -->
 
-
-
-  <!-- Modal Structure -->
   <div id="modal1" class="modal" >
     <div class="modal-content">
 
-      <h4>{{tituloBaner.titulo_1}}</h4>
+      <h4 class="titulo">{{tituloBaner.titulo_1}}</h4>
       <img [src]="imagenesBaner.imagen_1">
-      <p></p>
+      <p class="descripcion">{{description.description_1}}</p>
     </div>
 
     <!--footer, en caso de desear activarlo
@@ -32,8 +28,14 @@
       <img [src]="imagenesBaner.imagen_3">
       <p></p>
     </div>
+   </div>
+   <div id="modal4" class="modal" >
+    <div class="modal-content">
 
-  </div>
+      <h4>{{tituloBaner.titulo_4}}</h4>
+      <img [src]="imagenesBaner.imagen_4">
+      <p></p>
+    </div>
   <script>
   M.AutoInit();
   </script>

@@ -5,14 +5,22 @@
 }
 #FlexP{
   display: flex;
-
   position: relative;
   top:3cm;
   left:2cm;
-  width: 94%;
+  width:90%;
+
 }
 img{
   padding: 3%;
+}
+#FlexP2{
+  display: flex;
+  position: relative;
+  top:4cm;
+  left:2cm;
+  width:90%;
+
 }
 
 @media(max-width: 951px){

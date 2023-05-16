@@ -1,10 +1,8 @@
 import {  Component } from '@angular/core';
 import{ Location }from '@angular/common';
-
-
-
 import { OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ControladorService } from '../controlador.service';
 import { type } from 'jquery';
 
 
@@ -22,14 +20,14 @@ export class ApiPeliculasComponent implements OnInit{
   url="https://api.themoviedb.org/3/movie/popular?api_key=";
   key="8c84367d103d5239463d287812d5bafc";
 
-  constructor(private location:Location, private http: HttpClient,){}
+  constructor(private location:Location, private http: HttpClient, private co: ControladorService){}
   ngOnInit(): void {
 
     /*consumo de la api*/
     this.obtnerDatos();
     this.iniciarApi();
 
-
+    this.co.obtenerDatos();
     }
     /*boton de volver*/
   volver():void {
@@ -38,8 +36,9 @@ export class ApiPeliculasComponent implements OnInit{
     /*consulta para la api*/
   obtnerDatos()
   {var datos;
-   var obtencionDatos= this.url+this.key;
-   datos=this.http.get(obtencionDatos)
+   /*var obtencionDatos= this.url+this.key;*/
+   datos=this.http.get("http://127.0.0.1:8000/peliculas/")
+  
 
      return datos
 }
@@ -51,14 +50,17 @@ export class ApiPeliculasComponent implements OnInit{
       this.title= {titulo_1:data.results[0].title,
                     titulo_2:data.results[1].title,
                     titulo_3:data.results[2].title,
-                    titulo_4:data.results[3].title
+                    titulo_4:data.results[3].title,
+                    titulo_5:data.results[4].title
       }
-      //console.log(type(data.results[0].title));
+
       this.imagen={//se utiliza el valor almacenado en data dirigiendo la atencien en cada json
         imagen_1:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[0].poster_path,
         imagen_2:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[1].poster_path,
         imagen_3:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[2].poster_path,
-        imagen_4:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[3].poster_path
+        imagen_4:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[3].poster_path,
+        imagen_5:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[4].poster_path,
+
       }
 
 
@@ -67,10 +69,7 @@ export class ApiPeliculasComponent implements OnInit{
 
 
   }
-  ventanaModal(){
 
-
-  }
 
 
 

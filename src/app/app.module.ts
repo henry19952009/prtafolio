@@ -14,7 +14,7 @@ import { ApiPeliculasComponent } from './api-peliculas/api-peliculas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './modal/modal.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { ControladorService } from './controlador.service';
 
 
 
@@ -42,7 +42,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     HttpClientModule,
 
   ],
-  providers: [],
+  providers: [ControladorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
