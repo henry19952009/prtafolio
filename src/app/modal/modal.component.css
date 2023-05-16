@@ -13,3 +13,12 @@ img{
   margin-top:1cm;
   margin-left:1cm;
 }
+.titulo{
+  font-size: 50px;
+  font-family: fantasy;
+  text-align: center;
+  text-decoration-line:underline;
+  margin-bottom:1cm;
+
+}
+

@@ -38,7 +38,7 @@ export class ApiPeliculasComponent implements OnInit{
   {var datos;
    /*var obtencionDatos= this.url+this.key;*/
    datos=this.http.get("http://127.0.0.1:8000/peliculas/")
-  
+
 
      return datos
 }
@@ -51,7 +51,10 @@ export class ApiPeliculasComponent implements OnInit{
                     titulo_2:data.results[1].title,
                     titulo_3:data.results[2].title,
                     titulo_4:data.results[3].title,
-                    titulo_5:data.results[4].title
+                    titulo_5:data.results[4].title,
+                    titulo_6:data.results[5].title,
+                    titulo_7:data.results[6].title,
+                    titulo_8:data.results[7].title
       }
 
       this.imagen={//se utiliza el valor almacenado en data dirigiendo la atencien en cada json
@@ -60,6 +63,9 @@ export class ApiPeliculasComponent implements OnInit{
         imagen_3:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[2].poster_path,
         imagen_4:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[3].poster_path,
         imagen_5:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[4].poster_path,
+        imagen_6:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[5].poster_path,
+        imagen_7:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[6].poster_path,
+        imagen_8:"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+data.results[7].poster_path
 
       }
 
