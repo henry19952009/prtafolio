@@ -20,11 +20,11 @@
 
 #imagen{
 flex:auto;
-width: 300px;
-height: 300px;
+width: 350px;
+height: 400px;
 position: absolute;
 left:18%;
-top:30%;
+top:22%;
 border-radius: 50%;
 margin: 0%;
 }
@@ -46,7 +46,7 @@ margin: 0%;
   font-weight: bold;
   top: 550px;
   left: 38%;
-  
+
 }
 
 
@@ -68,19 +68,12 @@ margin: 0%;
   @media(max-width: 685px){
     #grid-1{
     position:relative ;
-    top:20cm;
+    top:22cm;
     left:0cm;
 
   }}
-  @media(max-width:685px){
-    #grid-1{
-      flex-direction:column;
-      position:absolute;
-      left: -1800px;
 
-      width:2000px;
-    }
-  }
+
 
 
 
