@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import * as $ from 'jquery';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/PrincipalComponent';
@@ -15,6 +15,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './modal/modal.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ControladorService } from './controlador.service';
+import { FormsModule } from '@angular/forms';
+//redux
+import { Store, StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ReComponent } from './redux/re/re.component';
+import { apiRest } from './redux/re/contadorReducer';
+import { FormularioComponent } from './formulario/formulario.component';
+//formulario
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,8 +35,8 @@ import { ControladorService } from './controlador.service';
     ApiPeliculasComponent,
     ModalComponent,
     NavbarComponent,
-
-
+    ReComponent,
+    FormularioComponent,
 
 
   ],
@@ -40,9 +49,14 @@ import { ControladorService } from './controlador.service';
     MatCardModule,
     FlexLayoutModule,
     HttpClientModule,
+    StoreModule.forRoot({state : apiRest}),
+    ReactiveFormsModule,
+    FormsModule,
 
   ],
   providers: [ControladorService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }

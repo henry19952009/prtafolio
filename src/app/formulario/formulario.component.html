@@ -1,0 +1,25 @@
+
+
+
+
+
+
+<form #formulariousuario="ngForm" (ngSubmit)="formularioEnviado()">
+<div class="collection">
+  <h1>Formulario</h1>
+
+	<input class="" type="text" name="nombre" placeholder="Nombre " [(ngModel)]="usuarioModel.nombre">
+
+	<input type="text" name="direccion" placeholder="direccion " [(ngModel)]="usuarioModel.direccion">
+
+	<input type="number" name="edad" placeholder="Edad " [(ngModel)]="usuarioModel.edad">
+
+  <button type="submit">Guardar</button>
+</div>
+
+
+</form>
+<div class="control">
+<h2 >Depurando:</h2>
+{{ usuarioModel | json }}
+</div>

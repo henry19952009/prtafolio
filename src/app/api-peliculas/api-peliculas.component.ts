@@ -5,6 +5,13 @@ import { HttpClient } from '@angular/common/http';
 import { ControladorService } from '../controlador.service';
 import { type } from 'jquery';
 
+import { Store, StoreModule } from '@ngrx/store';
+
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ReComponent } from '../redux/re/re.component';
+
+
+
 
 
 @Component({
@@ -12,6 +19,7 @@ import { type } from 'jquery';
   templateUrl: './api-peliculas.component.html',
   styleUrls: ['./api-peliculas.component.css']
 })
+
 export class ApiPeliculasComponent implements OnInit{
 
   title:any;
@@ -20,7 +28,8 @@ export class ApiPeliculasComponent implements OnInit{
   url="https://api.themoviedb.org/3/movie/popular?api_key=";
   key="8c84367d103d5239463d287812d5bafc";
 
-  constructor(private location:Location, private http: HttpClient, private co: ControladorService){}
+  constructor(private location:Location, private http: HttpClient, private co: ControladorService
+    , private re : ReComponent){}
   ngOnInit(): void {
 
     /*consumo de la api*/
@@ -43,7 +52,7 @@ export class ApiPeliculasComponent implements OnInit{
      return datos
 }
  iniciarApi():void{
-
+    this.re.obtenerDatos();
     //subscripcion a datos
     this.obtnerDatos().subscribe((data:any)=>{
 

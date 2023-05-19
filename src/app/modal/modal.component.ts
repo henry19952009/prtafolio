@@ -19,7 +19,7 @@ constructor(private apc: ApiPeliculasComponent){};
   this.apc.obtnerDatos()
   this.cards();
   this.datosModal();
-  
+
 }
   datosModal(){
   this.apc.obtnerDatos().subscribe((data:any)=>{
