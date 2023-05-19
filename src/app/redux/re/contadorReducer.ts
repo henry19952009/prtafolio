@@ -5,10 +5,10 @@ export function apiRest(state: any, action: Action){
   switch (action.type){
 
     case 'get':
-      
-      return "caso post"
+
+      return state="caso get"
     case 'post':
-      return "caso post"
+      return state="caso post"
     default:
       return state
   }

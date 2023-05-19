@@ -24,7 +24,14 @@ export class ApiPeliculasComponent implements OnInit{
 
   title:any;
   imagen:any;
-  id:string="";
+  datos:string[]=[
+    "Iron Man",
+    "Spiderman",
+    "Thor",
+    "Hulk",
+    "Black Widow",
+    "Hawk Eye"
+  ];
   url="https://api.themoviedb.org/3/movie/popular?api_key=";
   key="8c84367d103d5239463d287812d5bafc";
 
@@ -46,6 +53,7 @@ export class ApiPeliculasComponent implements OnInit{
   obtnerDatos()
   {var datos;
    /*var obtencionDatos= this.url+this.key;*/
+
    datos=this.http.get("http://127.0.0.1:8000/peliculas/")
 
 
