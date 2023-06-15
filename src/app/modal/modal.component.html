@@ -1,17 +1,19 @@
 
   <div id="modal1" class="modal" >
+    <ng-container *ngFor="let item of Datos">
     <div class="modal-content">
 
-      <h4 class="titulo">{{tituloBaner.titulo_1}}</h4>
-      <img [src]="imagenesBaner.imagen_1">
-      <p class="descripcion">{{description.description_1}}</p>
+      <h4 class="titulo" >{{item.title}}</h4>
+      <img [src]="item.poster_path">
+      <p class="descripcion">{{item.name}}</p>
     </div>
-
+  </ng-container>
+  </div>
     <!--footer, en caso de desear activarlo
       <div class="modal-footer">
 
     </div>-->
-  </div>
+ <!--</div>
   <div id="modal2" class="modal" >
     <div class="modal-content">
 
@@ -75,7 +77,8 @@
       <img [src]="imagenesBaner.imagen_8">
       <p class="descripcion">{{description.description_8}}</p>
     </div>
-  </div>
+  </div>-->
   <script>
   M.AutoInit();
   </script>
+

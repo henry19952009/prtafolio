@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { data } from 'jquery';
 import { usuario } from './mascota';
-import { ReComponent } from '../redux/re/re.component';
+
 
 @Component({
   selector: 'app-formulario',
@@ -11,13 +11,13 @@ import { ReComponent } from '../redux/re/re.component';
 })
 export class FormularioComponent {
   usuarioModel = new usuario("", "", 0);
-  constructor(private http:HttpClient, private re : ReComponent){}
+  constructor(private http:HttpClient){}
   formularioEnviado(){
     /*
     Aquí el formulario ha sido enviado, ya sea
     por presionar el botón, presionar Enter, etcétera
     */
-     this.re.enviarDatos();
+
     console.log("El formulario fue enviado : ", this.usuarioModel)
     alert("Enviado");
 

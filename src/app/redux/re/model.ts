@@ -1,3 +1,3 @@
 export interface IAppState{
-  state: any;
+  type: string;
 }

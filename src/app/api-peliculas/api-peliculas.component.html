@@ -1,15 +1,16 @@
 
-<div id="FlexP">
- <div id="cardJ">
+<div id="FlexP" *ngFor="let item of datos" >
+
+ <div id="cardJ" >
   <div class="row">
     <div class="col s12 m10">
       <div class="card">
         <div class="card-image">
-          <img class="modal-trigger" href="#modal1" [src]="imagen.imagen_1">
+          <img class="modal-trigger" href="#modal1" [src]="item.poster_path" >
           <span class="card-title"></span>
         </div>
         <div class="card-content">
-          {{title.titulo_1}}
+            {{item.title}}
         </div>
        <!-- <div class="card-action"> -->
 
@@ -18,7 +19,7 @@
     </div>
   </div>
  </div>
- <div id="cardJ">
+<!-- <div id="cardJ">
   <div class="row">
     <div class="col s12 m10">
       <div class="card">
@@ -131,23 +132,13 @@
       </div>
     </div>
   </div>
- </div>
+ </div>-->
 </div>
 <app-modal></app-modal>
 
 
 
-  <div class="row">
-    <div class="col s12 m6" *ngFor="let titulo of datos">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">{{titulo}}</span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        </div>
 
-    </div>
-   </div>
+
 
 

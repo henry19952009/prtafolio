@@ -19,11 +19,12 @@ import { FormsModule } from '@angular/forms';
 //redux
 import { Store, StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { ReComponent } from './redux/re/re.component';
-import { apiRest } from './redux/re/contadorReducer';
+
+import { ROOT_REDUCERS } from './redux/re/app.state';
 import { FormularioComponent } from './formulario/formulario.component';
 //formulario
 import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -35,7 +36,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ApiPeliculasComponent,
     ModalComponent,
     NavbarComponent,
-    ReComponent,
     FormularioComponent,
 
 
@@ -49,12 +49,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     FlexLayoutModule,
     HttpClientModule,
-    StoreModule.forRoot({state : apiRest}),
+    StoreModule.forRoot(ROOT_REDUCERS),
     ReactiveFormsModule,
     FormsModule,
 
   ],
-  providers: [ControladorService],
+  providers: [ControladorService,ModalComponent],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {

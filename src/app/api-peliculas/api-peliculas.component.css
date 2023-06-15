@@ -1,27 +1,17 @@
 
-#boton-r{
-  position:relative;
-  top:10cm;
-}
 #FlexP{
-  display: flex;
+  display: inline-block;
   position: relative;
+  flex-direction: column;
   top:3cm;
-  left:2cm;
-  width:90%;
+  left:0.4cm;
+  width:20%;
 
 }
 img{
   padding: 3%;
 }
-#FlexP2{
-  display: flex;
-  position: relative;
-  top:4cm;
-  left:2cm;
-  width:90%;
 
-}
 .card-image {
   transition: transform .3s;
 }
